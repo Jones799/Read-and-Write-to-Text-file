@@ -7,24 +7,24 @@ Text_File = "readme.txt"
 
 
 ### Read Start ###
-Topic = ''
+TopicRead = ''
 ### Read End ###
 
 
 ### Write Start ###
-Topic = ''
+TopicWrite = ''
 Data = ''
 ### Write End ###
 
 
 
-User_Input_Mod = (Intent + ":")
-User_Topic_Input_Mod = (Topic + ":")
-Notes_Mod = ["", Topic + ":" + " " + Data]
+User_Input_Mod = (TopicRead + ":")
+User_Topic_Input_Mod = (TopicWrite + ":")
+Notes_Mod = ["", TopicWrite + ":" + " " + Data]
 
 
 
-if Intent > "":
+if TopicRead > "":
     with open(Text_File, 'r') as fp:
         # read all lines in a list
         lines = fp.readlines()
@@ -39,7 +39,7 @@ if Intent > "":
 
 
 
-if Topic > "":
+if TopicWrite > "":
     with open(Text_File, 'r') as f:
         for l_no, line in enumerate(f):
             # search string
